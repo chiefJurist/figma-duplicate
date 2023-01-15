@@ -1,0 +1,806 @@
+/*GENERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*HEADER POSITION*/
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding-top: 1rem;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px rgb(207, 207, 207) solid;
+    padding-bottom: 1rem;
+    background-color: whitesmoke;
+}
+#divOne{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    align-items: center;
+    flex-basis: 35%;
+}
+#divTwo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-basis: 35%;
+}
+#divThree{
+    display: flex;
+    justify-content: end;
+    position: relative;
+    align-items: center;
+    flex-basis: 15%;
+}
+#divFour{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    flex-basis: 15%;
+}
+/*HEADER STYLE*/
+#figmaImage{
+    width: 20%;
+}
+#community{
+    font-weight: 600;
+    font-size: larger;
+}
+#searchButton{
+    font-weight: bolder;
+    font-size: x-large;
+}
+#searchBar{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid blue;
+    caret-color: blue;
+    font-size: large;
+    width: 120%;
+    padding-bottom: 1%;
+    margin-left: 3%;
+    padding-left: 1%;
+    background-color: whitesmoke;
+}
+#searchBar::placeholder{
+    font-weight: 500;
+    font-size: large;
+    color: rgb(187, 187, 187);
+    font-family: 'Trebuchet MS';
+}
+#searchBar::after{
+    border: none;
+    border-bottom: 3px solid blue;
+}
+#logIn{
+    background-color: white;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+}
+#logIn:hover{
+    color: rgb(207, 207, 207);
+}
+#signUp{
+    background-color: black;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10%;
+    color: white;
+}
+#signUp:hover{
+    color: grey;
+}
+
+
+
+/*FIRST SECTION POSITION*/
+#firstSection{
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-bottom: 1.5rem;
+    background-color: whitesmoke;
+    margin-top: 4.5rem;
+}
+#divContact{
+    flex-basis: 40%;
+    text-align: start;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    margin-left: 5rem;
+}
+#divLike{
+    flex-basis: 27%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+    position: relative;
+    align-items: center;
+}
+#divCopy{
+    flex-basis: 27%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    position: relative;
+    align-items: center;
+    margin-left: 4rem;
+}
+/*FIRST SECTION STYLE*/
+#contactUs{
+    font-weight: 800;
+    font-family: 'Trebuchet MS';
+    font-size: x-large;
+}
+#softwareseni{
+    width: 7%;
+    border-radius: 50%;
+    border: 1px solid black;
+    z-index: 2;
+    position: relative;
+}
+#beningGumilar{
+    width: 7%;
+    border-radius: 50%;
+    border: 1px solid black;
+    z-index: 1;
+    position: relative;
+    margin-left: -3%;
+}
+#owners{
+    color: grey;
+}
+#likeButton{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    border: 2px solid rgb(219, 219, 219);
+    background-color: whitesmoke;
+    border-radius: 7%;
+    color: grey;
+}
+#like{
+    font-size: large;
+    font-weight: bolder;
+}
+#copyButton{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 800;
+    font-family: 'Trebuchet MS';
+    color: white;
+    background-color: rgb(131, 131, 255);
+    border: none;
+    border-radius: 6%;
+}
+#copyNumber{
+    color: rgb(197, 197, 255);
+}
+
+
+/* MAIN IFRAME POSITION*/
+#frameSection{
+    padding-top: 300px;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-bottom: 10rem;
+}
+
+/*BODY SECTION POSITION*/
+#bodySection{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+#leftSide{
+    flex-basis: 55%;
+    margin-left: 10%;
+}
+#rightSide{
+    flex-basis: 25%;
+}
+#adParagraph{
+    padding-bottom: 3%;
+    border-bottom: 1px solid rgb(197, 197, 197);
+}
+#moreSamples{
+    padding-top: 5%;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-bottom: 2%;
+}
+#flexDiv{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+#bottomLeft{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 2px solid rgb(202, 201, 201);
+    border-radius: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+#userCommenting{
+    background-color: gold;
+    color: white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    margin-left: 2%;
+    justify-content: end;
+}
+#comment{
+    justify-content: left;
+    flex-basis: 70%;
+    background-color: white;
+}
+#commentText{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-top: 0.5rem;
+    background-color: white;
+}
+#commentText::placeholder{
+    color: rgb(201, 201, 201);
+}
+#submitcomment{
+    justify-content: end;
+    flex-basis: 15%;
+}
+#submitcommentButton{
+    background-color: rgb(182, 182, 182);
+    color: white;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5%;
+}
+/*Right Hand Side*/
+#communityAnnouncementContainer{
+    background-color: rgb(223, 247, 255);
+    width: 14rem;
+    padding: 1rem;
+    font-size: smaller;
+    border-radius: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+#communityAnnouncement{
+    flex-basis: 85%;
+}
+#imageDiv{
+    flex-basis: 10%;
+}
+#communityAnnouncementImage{
+    width: 100%;
+}
+#tags{
+    margin-top: 10%;
+    margin-bottom: 3%;
+    font-weight: bolder;
+    font-size: small;
+}
+.gridButton{
+    outline: none;
+    background-color: whitesmoke;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 7%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+#gridButtons{
+    display: grid;
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+}
+#share{
+    font-weight: bolder;
+    font-size: small;
+    margin-top: 11%;
+    margin-bottom: 3%;
+}
+.shareButton{
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    text-align: center;
+    align-items: center;
+    background-color: whitesmoke;
+    outline: none;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5%;
+    margin-right: 0.2rem;
+}
+.shareButtonLink{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    text-align: center;
+    align-items: center;
+}
+#shareDiv{
+    margin-bottom: 5%;
+}
+#licenseDiv{
+    margin-top: 10%;
+}
+#licenseOne{
+    font-size: smaller;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+#licenseTwo{
+    font-size: smaller;
+    color: rgb(44, 44, 44);
+}
+#licenseThree{
+    font-size: smaller;
+    color: rgb(44, 44, 44);
+}
+#report{
+    color: rgb(197, 197, 197);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: smaller;
+}
+
+/*BODY SECTION STYLE*/
+#flexImage{
+    width: 90%;
+    border-radius: 5%;
+}
+#flexImage1{
+    width: 90%;
+    border-radius: 5%;
+}
+#flexImage2{
+    width: 90%;
+    border-radius: 5%;
+}
+#flexImage3{
+    width: 90%;
+    border-radius: 5%;
+}
+
+/*WHEN THE SCREEN GETS SMALLER*/
+@media (max-width:1100px){
+    iframe{
+        height: 550px;
+    }
+}
+
+/*WHEN THE SCREEN GETS SMALLER*/
+@media (max-width:920px){
+    #bodySection{
+        display: inline;
+    }
+    #tags{
+        margin-left: 3%;
+    }
+    #gridButtons{
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        margin-left: 3%;
+    }
+    #communityAnnouncementContainer{
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 1rem;
+    }
+    #share,#shareDiv, #licenseDiv, #report{
+        margin-left: 3%;
+    }
+    #bottomLeft{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border: 1px solid rgb(202, 201, 201);
+        border-radius: 1rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    #leftSide{
+        width: 95%;
+        margin-left: 3%;
+    }
+    #bodySection{
+        margin-top: -20rem;
+    }
+    iframe{
+        height: 450px;
+    }
+}
+
+
+/*FOR PHONES*/
+@media (max-width:600px){
+    #divThree, #divLike, #divCopy{
+        display: none;
+    }
+    #figmaImage{
+        width: 80%;
+    }
+    #divOne{
+        margin-left: 1rem;
+    }
+    #divFour{
+        margin-right: 0.4rem;
+    }
+    #softwareseni, #beningGumilar{
+        width: 10%;
+    }
+    #firstSection{
+        display: inline;
+
+    }
+    #divContact{
+        margin-left: 1rem;
+    }
+    #bodySection{
+        margin-top: -33rem;
+    }
+    iframe{
+        height: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*THIS IS FOR THE LAYER SECTION*/
+/*FORM*/
+form{
+    width: 18rem;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    text-align: center;
+    margin-left: 35%;
+}
+#cancelParagraph{
+    width: auto;
+    text-align: right;
+    margin-right: 1.5rem;
+    padding-top: 1rem;
+}
+#cancelButton{
+    background-color: white;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: rgb(170, 170, 170);
+}
+#layerFormIcon{
+    font-size: 5rem;
+}
+#offer, #apology{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+#instruction{
+    padding-top: 1rem;
+    color: rgb(170, 170, 170);
+}
+#formLogInParagraph{
+    padding-top: 3rem;
+}
+#formLogIn{
+    width: 15rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+#formSignUpParagraph{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+#formSignUp{
+    width: 15rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+/*FOR PHONES*/
+@media (max-width: 600px){
+    form{
+        margin-left: 12%;
+    }
+}
+
+/*FOR SAMSUNG GALAXY FOLD*/
+@media (max-width: 300px){
+    form{
+        margin-left: 0%;
+    }
+}
+
+
+/*POSITIONING THE LAYER (FOR NEST HUB MAX AND LAPTOP FULL-SCREEN)*/
+#mainPage{
+    z-index: 1;
+    position: relative;
+}
+#formSection, #apologySection{
+    z-index: 2;
+    position: relative;
+    margin-top: -150%;
+    background-color: rgb(226, 226, 226);
+    padding-top: 25rem;
+    padding-bottom: 45rem;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/*POSITIONIN OF  SURFACE PRO 7, NEST HUB, AND AS THE LAPTOP SCREEN GETS SMALLER*/
+@media (max-width: 1250px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -200%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 35rem;
+        padding-bottom: 55rem;
+        position: fixed;
+        width: 100%;
+    }
+    
+}
+
+
+/*POSITIONING OF IPAD AIR, IPAD AIR, AND AS THE LAPTOP SCREEN GETS SMALLER*/
+@media (max-width: 900px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -310%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 15rem;
+        padding-bottom: 55rem;
+        position: fixed;
+        width: 100%;
+    }
+    
+}
+
+
+/*POSITIONING OF WHEN THE LAPTOP SCREEN GETS SMALLER*/
+@media (max-width: 760px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -390%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 35rem;
+        padding-bottom: 55rem;
+        position: fixed;
+        width: 100%;
+    }
+    
+}
+
+
+/*POSITIONING OF WHEN THE LAPTOP SCREEN GETS SMALLER*/
+@media (max-width: 680px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -390%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 25rem;
+        padding-bottom: 55rem;
+        position: fixed;
+        width: 100%;
+    }
+    
+}
+
+
+/*POSITIONING OF WHEN TJHE SCREEN GETS SMALLER*/
+@media (max-width: 600px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -440%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 27rem;
+        padding-bottom: 45rem;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/*POSITIONING OF WHEN TJHE SCREEN GETS SMALLER*/
+@media (max-width: 535px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -440%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 20rem;
+        padding-bottom: 45rem;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/*POSITIONING OF PHONES, SURFACE DUO, iPHONE XR, SAMSUNG GALAXY X20 ULTRA, SAMSUNG GALAXY A51/71,*/
+@media (max-width: 435px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -580%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 19rem;
+        padding-bottom: 45rem;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/*POSITIONING OF SAMSUNG GALAXY S8+*/
+@media (max-width: 370px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -600%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 20rem;
+        padding-bottom: 45rem;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+/*POSITIONING OF GALAXY FOLD*/
+@media (max-width: 300px){
+    #mainPage{
+        z-index: 1;
+        position: relative;
+    }
+    #formSection, #apologySection{
+        z-index: 2;
+        position: relative;
+        margin-top: -750%;
+        background-color: rgb(197, 197, 197);
+        padding-top: 10rem;
+        padding-bottom: 45rem;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+
+
+
+/*ADDITIONAL INFO FOR THE LOG IN INFO*/
+#secondLayerForm{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bolder;
+    font-size: medium;
+    color: grey;
+}
+
+#secondLayerOkay{
+    width: 15rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#secondLayerOkay:hover{
+    color: grey;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+#secondLayerOkay:active{
+    color: rgb(85, 84, 84);
+    border: 1px solid rgb(199, 197, 197);
+}

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get In Touch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            /*GENERAL*/
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+            body{
+                background-color: rgb(231, 231, 231);
+            }
+
+            /*FORM*/
+            form{
+                background-color: rgb(231, 231, 231);
+                width: 100%;
+                padding-bottom: 5%;
+                padding-top: 5%;
+            }
+            #firstDiv{
+                text-align: end;
+            }
+            #fullScreenButton{
+                background-color: rgb(49, 49, 49);
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 10%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-right: 4rem;
+                z-index: 2;
+            }
+            #domImage{
+                z-index: 1;
+            }
+            #sizeButton{
+                background-color: rgb(49, 49, 49);
+                border: none;
+                outline: none;
+                border-radius: 5%;
+                margin-left: 3rem;
+                z-index: 4;
+                display: flex;
+                width: 10rem;
+            }
+            #minusButton{
+                background-color: rgb(49, 49, 49);
+                color: white;
+                font-size: x-large;
+                font-weight: lighter;
+                text-align: center;
+                border: none;
+                border-right: 1px solid black;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                flex-basis: 30%;
+            }
+            #percentButton{
+                background-color: rgb(49, 49, 49);
+                color: white;
+                border: none;
+                outline: none;
+                text-align: center;
+                padding-top: 0.7rem;
+                padding-bottom: 5px;
+                flex-basis: 40%;
+            }
+            #plusButton{
+                background-color: rgb(49, 49, 49);
+                color: white;
+                font-size: x-large;
+                font-weight: lighter;
+                text-align: center;
+                border: none;
+                border-left: 1px solid black;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                flex-basis: 30%;
+            }
+            #semiFullScreenButton{
+                background-color: rgb(49, 49, 49);
+                color: white;
+                border: none;
+                outline: none;
+                border-radius: 10%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: 1rem;
+                z-index: 5;
+            }
+
+            /*POSITION*/
+            #secondDiv{
+                text-align: center;
+            }
+            #thirdDiv{
+                display: flex;
+                justify-content: space-between;
+            }
+            #pageDiv{
+                flex-basis: 60%;
+            }
+            #sizeDiv{
+                flex-basis: 20%;
+                text-align: end;
+            }
+            #semiScreen{
+                flex-basis: 10%;
+            }
+            #pageDivOne{
+                background-color: rgb(65, 65, 65);
+                color: white;
+                border-radius: 10%;
+                width: 8rem;
+                margin-left: 1rem;
+            }
+            #pageDivOneB{
+                background-color: rgb(65, 65, 65);
+                color: white;
+                border-radius: 10%;
+                width: 8rem;
+                margin-left: 1rem;
+                margin-bottom: 0.5rem;
+            }
+            #detail{
+                border: none;
+                outline: none;
+                width: 100%;
+                padding-top: 1.2rem;
+                padding-bottom: 0.6rem;
+                background-color: rgb(65, 65, 65);
+                color: white;
+                text-align: left;
+                padding-left: 1rem;
+            }
+            #design{
+                border: none;
+                outline: none;
+                width: 100%;
+                padding-top: 0.6rem;
+                padding-bottom: 1.2rem;
+                background-color: rgb(65, 65, 65);
+                color: white;
+                text-align: left;
+                padding-left: 1rem;
+            }
+            #design:hover{
+                background-color: aqua;
+            }
+            #detail:hover{
+                background-color: aqua;
+            }
+            #pageDivTwo{
+                background-color: rgb(65, 65, 65);
+                color: white;
+                border-radius: 5%;
+                width: 8rem;
+                margin-left: 1rem;
+                padding-top: 0.2rem;
+                padding-bottom: 0.2rem;
+            }
+            #general{
+                border: none;
+                outline: none;
+                width: 100%;
+                padding-top: 0.3rem;
+                padding-bottom: 0.3rem;
+                background-color: rgb(65, 65, 65);
+                color: white;
+                text-align: left;
+                padding-left: 1rem;
+            }
+
+            /*FOR SMART PHONES*/
+            @media (max-width: 900px) {
+                #firstDiv, #thirdDiv{
+                    display: none;
+                }
+                #domImage{
+                    width: 100%;
+                }
+            }
+        </style>
+        <script type="text/javascript">
+            function fullScreen() {
+                var picture;
+                picture = document.getElementById('secondDiv').innerHTML;
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                //TO CONVERT IT BACK TO NORMAL SCREEN SIZE
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="70%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                //IF IT HAS ALREADY BEEN AFFECTED BY THE SEMI FULL SCREEN
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                //IF IT HAS BEEN AFFECTED BY THE INCREASE OR DECREASE BUTTON OF THE FIRST IMAGE
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="125%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="130%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                //IF IT HAS BEEN AFFECTED BY THE INCREASE OR DECREASE BUTTON OF THE SECOND IMAGE
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="35%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="40%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+            }
+
+            function semiFullScreen() {
+                var picture2;
+                picture2 = document.getElementById('secondDiv').innerHTML;
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                //TO CONVERT IT BACK TO NORMAL SCREEN SIZE
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="70%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                //IF IT HAS ALREADY BEEN AFFECTED BY THE FULL SCREEN
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                //IF IT HAS BEEN AFFECTED BY THE INCREASE OR DECREASE BUTTON OF THE FIRST IMAGE
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="125%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1.png" alt="" id="domImage" width="130%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                //IF IT HAS BEEN AFFECTED BY THE INCREASE OR DECREASE BUTTON OF THE SECOND IMAGE
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="35%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="40%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture2 == '<img src="images/dom1b.jpg" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+            }
+
+            function designGeneral() {
+                document.getElementById('pageDivOne').innerHTML = '<input type="button" value="Detail" id="detail">';
+                document.getElementById('pageDivOneB').innerHTML = '<input type="button" value="Design" id="design">';
+            }
+
+            function detail() {
+                document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">';
+                document.getElementById('pageDivTwo').innerHTML = '<input type="button" value="Page: Detail &#8964;" id="general" onclick="designGeneral();">';
+                document.getElementById('pageDivOne').innerHTML = '';
+                document.getElementById('pageDivOneB').innerHTML = '';
+            }
+
+            function design() {
+                document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="70%">';
+                document.getElementById('pageDivTwo').innerHTML = '<input type="button" value="Page: Design &#8964;" id="general" onclick="designGeneral();">';
+                document.getElementById('pageDivOne').innerHTML = '';
+                document.getElementById('pageDivOneB').innerHTML = '';
+            }
+
+            //FOR THE + BUTTON 
+            function increaseButton() {
+                var picture;
+                picture = document.getElementById('secondDiv').innerHTML;
+                //FOR THE FIRST IMAGE
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="50%">';
+                    document.getElementById('pictureSize').innerHTML = '40';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="55%">';
+                    document.getElementById('pictureSize').innerHTML = '60';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="60%">';
+                    document.getElementById('pictureSize').innerHTML = '80';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="65%">';
+                    document.getElementById('pictureSize').innerHTML = '100';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="70%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '140';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="80%">';
+                    document.getElementById('pictureSize').innerHTML = '160';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '200';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="95%">';
+                    document.getElementById('pictureSize').innerHTML = '220';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="105%">';
+                    document.getElementById('pictureSize').innerHTML = '260';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="110%">';
+                    document.getElementById('pictureSize').innerHTML = '280';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="115%">';
+                    document.getElementById('pictureSize').innerHTML = '300';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="120%">';
+                    document.getElementById('pictureSize').innerHTML = '320';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="125%">';
+                    document.getElementById('pictureSize').innerHTML = '340';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="125%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="130%">';
+                    document.getElementById('pictureSize').innerHTML = '360';
+                }
+
+                //FOR THE SECOND IMAGE
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="35%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="40%">';
+                    document.getElementById('pictureSize').innerHTML = '40';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="40%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="45%">';
+                    document.getElementById('pictureSize').innerHTML = '60';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">';
+                    document.getElementById('pictureSize').innerHTML = '80';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="55%">';
+                    document.getElementById('pictureSize').innerHTML = '100';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="65%">';
+                    document.getElementById('pictureSize').innerHTML = '140';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="70%">';
+                    document.getElementById('pictureSize').innerHTML = '160';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="80%">';
+                    document.getElementById('pictureSize').innerHTML = '200';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '220';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="95%">';
+                    document.getElementById('pictureSize').innerHTML = '260';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '280';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="105%">';
+                    document.getElementById('pictureSize').innerHTML = '300';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="110%">';
+                    document.getElementById('pictureSize').innerHTML = '320';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="115%">';
+                    document.getElementById('pictureSize').innerHTML = '340';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="120%">';
+                    document.getElementById('pictureSize').innerHTML = '360';
+                }
+            }
+
+            //FOR THE - BUTTON
+            function decreaseButton() {
+                var picture;
+                picture = document.getElementById('secondDiv').innerHTML;
+                //FOR THE FIRST IMAGE
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="130%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="125%">';
+                    document.getElementById('pictureSize').innerHTML = '340';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="125%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="120%">';
+                    document.getElementById('pictureSize').innerHTML = '320';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="115%">';
+                    document.getElementById('pictureSize').innerHTML = '300';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="110%">';
+                    document.getElementById('pictureSize').innerHTML = '280';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="105%">';
+                    document.getElementById('pictureSize').innerHTML = '260';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="95%">';
+                    document.getElementById('pictureSize').innerHTML = '220';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '200';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="80%">';
+                    document.getElementById('pictureSize').innerHTML = '160';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '140';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="70%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="65%">';
+                    document.getElementById('pictureSize').innerHTML = '100';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="60%">';
+                    document.getElementById('pictureSize').innerHTML = '80';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="55%">';
+                    document.getElementById('pictureSize').innerHTML = '60';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="50%">';
+                    document.getElementById('pictureSize').innerHTML = '40';
+                }
+                if (picture == '<img src="images/dom1.png" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1.png" alt="" id="domImage" width="45%">';
+                    document.getElementById('pictureSize').innerHTML = '20';
+                }
+                //FOR THE SECOND IMAGE
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="120%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="115%">';
+                    document.getElementById('pictureSize').innerHTML = '340';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="115%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="110%">';
+                    document.getElementById('pictureSize').innerHTML = '320';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="110%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="105%">';
+                    document.getElementById('pictureSize').innerHTML = '300';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="105%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="100%">';
+                    document.getElementById('pictureSize').innerHTML = '280';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="100%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="95%">';
+                    document.getElementById('pictureSize').innerHTML = '260';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="95%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">';
+                    document.getElementById('pictureSize').innerHTML = '240';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="90%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="85%">';
+                    document.getElementById('pictureSize').innerHTML = '220';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="85%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="80%">';
+                    document.getElementById('pictureSize').innerHTML = '200';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="80%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">';
+                    document.getElementById('pictureSize').innerHTML = '180';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="75%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="70%">';
+                    document.getElementById('pictureSize').innerHTML = '160';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="70%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="65%">';
+                    document.getElementById('pictureSize').innerHTML = '140';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="65%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">';
+                    document.getElementById('pictureSize').innerHTML = '119';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="60%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="55%">';
+                    document.getElementById('pictureSize').innerHTML = '100';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="55%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">';
+                    document.getElementById('pictureSize').innerHTML = '80';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="50%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="45%">';
+                    document.getElementById('pictureSize').innerHTML = '60';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="45%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="40%">';
+                    document.getElementById('pictureSize').innerHTML = '40';
+                }
+                if (picture == '<img src="images/dom1b.jpg" alt="" id="domImage" width="40%">') {
+                    document.getElementById('secondDiv').innerHTML = '<img src="images/dom1b.jpg" alt="" id="domImage" width="35%">';
+                    document.getElementById('pictureSize').innerHTML = '20';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="formDiv">
+            <form action="">
+                <div id="firstDiv">
+                    <input type="button" value="&#8601;&#8599;" id="fullScreenButton" onclick="fullScreen();">
+                </div>
+                <div id="secondDiv"><img src="images/dom1.png" alt="" id="domImage" width="70%"></div>
+                <div id="thirdDiv">
+                    <div id="pageDiv">
+                        <div id="pageDivOne" onclick="detail();"></div>
+                        <div id="pageDivOneB"  onclick="design();"></div>
+                       <div id="pageDivTwo">
+                            <input type="button" value="Page: Design &#8964;" id="general" onclick="designGeneral();">
+                       </div>
+                    </div>
+                    <div id="sizeDiv">
+                        <div id="sizeButton">
+                            <input type="button" value="-" id="minusButton" onclick="decreaseButton();">
+                            <p id="percentButton"><span id="pictureSize">119</span><span> %</span></p>
+                            <input type="button" value="+" id="plusButton" onclick="increaseButton();">
+                        </div>
+                    </div>
+                    <div id="semiScreen">
+                        <input type="button" value="&#8601;&#8599;" id="semiFullScreenButton" onclick="semiFullScreen();">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

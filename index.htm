@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Us | Figma Community</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="shortcut icon" href="images/figma3.jpg">
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function searchBar() {
+                document.getElementById('searchBarSpan').innerHTML = '<input type="search" name="" id="searchBar" placeholder="Search the Figma Community">';
+                document.getElementById('divFour').innerHTML = '';
+            }
+            function dom2() {
+                var topic;
+                topic =document.getElementById('contactUs').innerHTML;
+                //FOR THE VERY FIRST TIME
+                if (topic == 'Contact Us') {
+                    document.getElementById('frameSection').innerHTML = '<iframe src="indexDom2.htm" frameborder="0" width="90%" height="720px" id="frame"></iframe>';
+                    document.getElementById('contactUs').innerHTML ='Blog List & Detail Page';
+                    document.getElementById('flexImage1div').innerHTML = '<img src="images/dom1.png" alt="" id="flexImage1"><br><span>Contact Us</span>';
+                } else {
+                    window.location.reload();
+                }
+            }
+            function dom3() {
+                var topic;
+                topic =document.getElementById('contactUs').innerHTML;
+                //FOR THE VERY FIRST TIME
+                if (topic == 'Contact Us') {
+                    document.getElementById('frameSection').innerHTML = '<iframe src="indexDom3.htm" frameborder="0" width="90%" height="720px" id="frame"></iframe>';
+                    document.getElementById('contactUs').innerHTML ='Product Detail';
+                    document.getElementById('flexImage2div').innerHTML = '<img src="images/dom1.png" alt="" id="flexImage1"><br><span>Contact Us</span>';
+                } else {
+                    window.location.reload();
+                }
+            }
+            function dom4() {
+                var topic, value;
+                value = 'Contact Us';
+                topic = document.getElementById('contactUs').innerHTML;
+                //FOR THE VERY FIRST TIME
+                if (topic == value) {
+                    document.getElementById('frameSection').innerHTML = '<iframe src="indexDom4.htm" frameborder="0" width="90%" height="720px" id="frame"></iframe>';
+                    document.getElementById('contactUs').innerHTML ='Checkout Page';
+                    document.getElementById('flexImage3div').innerHTML = '<img src="images/dom1.png" alt="" id="flexImage1"><br><span>Contact Us</span>';
+                } else {
+                    window.location.reload();
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            //A FUNCTION TO DIRECT TO LOG IN OR SIGN UP
+            function access() {
+                var value;
+                document.getElementById('layer').innerHTML = '<section id="formSection" onclick="reload();"><form action=""><p id="cancelParagraph"><input type="button" value="X" id="cancelButton"  onclick="reload();"></p><p id="imgParagraph"><ion-icon name="document-outline" id="layerFormIcon"></ion-icon></p><p id="offer">Sign up to get this file <br>(and much more)</p><p id="instruction">Join community for access to thousands <br>of plugins, widgets and files</p><p id="formLogInParagraph"><input type="button" value="Sign up" id="formLogIn"  onclick="apology();"></p><p id="formSignUpParagraph"><input type="button" value="Log in" id="formSignUp"  onclick="apology();"></p></form></section>';
+            }
+            //A FUNCTION TO RELOAD
+            function reload() {
+                window.location.reload();
+            }
+            //A FUNCTION TO REMIND YOU THAT THIS IS A REPLICA
+            function apology() {
+                document.getElementById('secondLayer').innerHTML = '<section id="apologySection" onclick="reload();"><form action="" id="secondLayerForm"><p id="apology">SORRY BUT YOU WILL NOT BE ABLE TO LOG IN OR SIGN UP <br> BECAUSE THIS IS JUST A DUPLICATE OF A PROPERTY BELONGING TO FIGMA</p><input type="button" value="OK" id="secondLayerOkay" onclick="reload();"></form></section>';
+            }
+        </script>
+    </head>
+
+
+    <body>
+        <sectionn id="mainPage">
+            <header>
+                <div id="divOne">
+                    <span><img src="images/figma3.jpg" alt="" id="figmaImage"></span>
+                    <span id="community">Community</span>
+                </div>
+    
+                <div id="divTwo">
+                    <span id="searchButton" onclick="searchBar();">
+                        <ion-icon name="search-sharp" id="searchButton"></ion-icon>
+                    </span>
+                    <span id="searchBarSpan"></span>
+                </div>
+    
+                <div id="divThree">
+                    <span><input type="button" value="Log in" id="logIn" onclick="apology();"></span>
+                </div>
+    
+                <div id="divFour">
+                    <span><input type="button" value="Sign up" id="signUp" onclick="apology();"></span>
+                </div>
+    
+            </header>
+    
+    
+            <section id="firstSection">
+                <div id="divContact">
+                    <span id="contactUs">Contact Us</span><br>
+                    <span id="contacts">
+                        <img src="images/softwareseni.png" alt="" id="softwareseni">
+                        <img src="images/bening-gumilar.jpg" alt="" id="beningGumilar">
+                        <small id="owners">By Softwareseni and Bening Gumilar</small>
+                    </span>
+                </div>
+    
+                <div id="divLike">
+                    <button id="likeButton" onclick="access();">
+                        <span><ion-icon name="heart-outline" id="like"></ion-icon></span>
+                        <span>18</span>
+                    </button>
+                </div>
+    
+                <div id="divCopy">
+                    <button id="copyButton" onclick="access();">
+                        <span>Get a copy</span>
+                        <span id="copyNumber">417</span>
+                    </button>
+                </div>
+            </section>
+    
+    
+            <section id="frameSection">
+                <iframe src="indexDom1.htm" frameborder="0" width="90%" height="720px" id="frame"></iframe>
+            </section>
+    
+    
+            <section id="bodySection">
+                <div id="leftSide">
+                    <p id="adParagraph">
+                        Hi guys 👋 , <br><br><br> We are back with another <b>#UIfreebies</b> for Contact Us page ~ ~ <br>
+                        Feel free to left a feedback! Like and comment if you think it is useful! <br><br><br>
+                        Cheers 🍻
+                    </p>
+    
+                    <p id="moreSamples">More by these creators</p>
+    
+                    <div id="flexDiv">
+                        <div id="flexImage1div" onclick="dom2();">
+                            <img src="images/dom2.png" alt="" id="flexImage1"><br>
+                            <span>Blog List & Detail Page</span>
+                        </div>
+                        <div id="flexImage2div"  onclick="dom3();">
+                            <img src="images/dom3.png" alt="" id="flexImage2"><br>
+                            <span>Product Detail</span>
+                        </div>
+                        <div id="flexImage3div" onclick="dom4();">
+                            <img src="images/dom4.png" alt="" id="flexImage3"><br>
+                            <span>Checkout Page</span>
+                        </div>
+                    </div>
+    
+                    <div id="bottomLeft"  onclick="access();">
+                        <div id="userCommenting">A</div>
+                        <div id="comment"><input type="text" placeholder="Add a comment" id="commentText"></div>
+                        <div id="submitcomment"><input type="button" value="Post" id="submitcommentButton"></div>
+                    </div>
+                </div>
+    
+    
+                <div id="rightSide">
+                    <div id="communityAnnouncementContainer">
+                        <div id="imageDiv">
+                            <ion-icon name="megaphone-outline" id="communityAnnouncementImage"></ion-icon>
+                        </div>
+                        <div id="communityAnnouncement">
+                            <span><b>This is a Figma Community file.</b></span>
+                            <span>Community is a space for Figma users to share things they create.</span>
+                            <span><a href="#"  onclick="apology();">Get started with a free account →</a></span>
+                        </div>
+                    </div>
+    
+                    <p id="tags">Tags</p>
+    
+                    <div id="gridButtons">
+                        <div id="gridButtonOne">
+                            <a href="#">
+                                <input type="button" value="blue" class="gridButton"  onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonTwo">
+                            <a href="#">
+                                <input type="button" value="contact" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonThree">
+                            <a href="#">
+                                <input type="button" value="contact page" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonFour">
+                            <a href="#">
+                                <input type="button" value="desktop" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonFive">
+                            <a href="#">
+                                <input type="button" value="freebies" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonSix">
+                            <a href="#">
+                                <input type="button" value="maps" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonSeven">
+                            <a href="#">
+                                <input type="button" value="page" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonEight">
+                            <a href="#">
+                                <input type="button" value="pink" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonNine">
+                            <a href="#">
+                                <input type="button" value="ui" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonTen">
+                            <a href="#">
+                                <input type="button" value="ux" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                        <div id="gridButtonEleven">
+                            <a href="#">
+                                <input type="button" value="website" class="gridButton" onclick="access();">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <p id="share">Share</p>
+    
+                    <div id="shareDiv">
+                        <button class="shareButton">
+                            <a href="#" class="shareButtonLink" onclick="access();">&#128279;</a>
+                        </button>
+                        <button class="shareButton">
+                            <a href="#" class="shareButtonLink" onclick="access();"><ion-icon name="logo-twitter"></ion-icon></a>
+                        </button>
+                        <button class="shareButton">
+                            <a href="#" class="shareButtonLink" onclick="access();"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </button>
+                    </div>
+    
+                    <div id="licenseDiv">
+                        <p id="licenseOne">Made for Figma Design</p>
+                        <p id="licenseTwo">Last updated 21 days ago</p>
+                        <p id="licenseThree">Licensed under CC BY 4.0</p>
+                    </div>
+    
+                    <p id="report" onclick="access();">Flag as inappropriate...</p>
+                </div>
+            </section>
+        </section>
+        <section id="layer"></section>
+        <section id="secondLayer"></section>
+    </body>
+</html>
