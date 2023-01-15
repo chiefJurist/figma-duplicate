@@ -599,7 +599,7 @@ form{
 }
 
 /*POSITIONIN OF  SURFACE PRO 7, NEST HUB, AND AS THE LAPTOP SCREEN GETS SMALLER*/
-@media (max-width: 1250px){
+@media (max-width: 1100px){
     #mainPage{
         z-index: 1;
         position: relative;
@@ -619,7 +619,7 @@ form{
 
 
 /*POSITIONING OF IPAD AIR, IPAD AIR, AND AS THE LAPTOP SCREEN GETS SMALLER*/
-@media (max-width: 900px){
+@media (max-width: 920px){
     #mainPage{
         z-index: 1;
         position: relative;
@@ -627,9 +627,9 @@ form{
     #formSection, #apologySection{
         z-index: 2;
         position: relative;
-        margin-top: -310%;
+        margin-top: -290%;
         background-color: rgb(197, 197, 197);
-        padding-top: 15rem;
+        padding-top: 25rem;
         padding-bottom: 55rem;
         position: fixed;
         width: 100%;
@@ -687,7 +687,7 @@ form{
     #formSection, #apologySection{
         z-index: 2;
         position: relative;
-        margin-top: -440%;
+        margin-top: -400%;
         background-color: rgb(197, 197, 197);
         padding-top: 27rem;
         padding-bottom: 45rem;
@@ -723,9 +723,9 @@ form{
     #formSection, #apologySection{
         z-index: 2;
         position: relative;
-        margin-top: -580%;
+        margin-top: -500%;
         background-color: rgb(197, 197, 197);
-        padding-top: 19rem;
+        padding-top: 25rem;
         padding-bottom: 45rem;
         position: fixed;
         width: 100%;
@@ -741,7 +741,7 @@ form{
     #formSection, #apologySection{
         z-index: 2;
         position: relative;
-        margin-top: -600%;
+        margin-top: -500%;
         background-color: rgb(197, 197, 197);
         padding-top: 20rem;
         padding-bottom: 45rem;
@@ -759,7 +759,7 @@ form{
     #formSection, #apologySection{
         z-index: 2;
         position: relative;
-        margin-top: -750%;
+        margin-top: -600%;
         background-color: rgb(197, 197, 197);
         padding-top: 10rem;
         padding-bottom: 45rem;
